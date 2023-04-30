@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <div id="main-page" class="">
+        <h1 class="mt-3 mb-3">Landing Page Generator</h1>
+        <br>
+        <hr>
+        <form action"#" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label">Business Name</label>
+              <input type="text" name="businessName" class="form-control" placeholder="Enter Name of Business" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Business Details</label>
+              <input type="text" name="businessDo" class="form-control" placeholder="What does your Business Do?" required>
+            </div>
+            
+
+            <button id="get-website-content" type="submit" class="btn btn-primary">GET WEBSITE CONTENT</button>
+        </form>
+      </div>
+
+      <div id="loading-page" class="">
+
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+              <h1>We are working on your content!</h1>
+              <p>Don not refresh the page</p>
+              <br>
+              <div style="width:100%;height:0;padding-bottom:100%;position:relative;">
+                <iframe src="https://giphy.com/embed/l3nWhI38IWDofyDrW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              </div>
+              <p>
+                <a href="https://giphy.com/gifs/thinking-l3nWhI38IWDofyDrW">via GIPHY</a>
+              </p>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#loading-page").hide();
+      });
+
+      $("#get-website-content").click(function() {
+        $("#main-page").hide();
+        $("#loading-page").show();
+      }); 
+
+    </script>
+  </body>
+</html>
