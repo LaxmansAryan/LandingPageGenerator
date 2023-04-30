@@ -2,7 +2,7 @@ import os
 import openai
 #from django.conf import settings
 
-openai.api_key = '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'
+openai.api_key = ''
 
 def returnsection1Title(businessDo):
     response = openai.Completion.create(
