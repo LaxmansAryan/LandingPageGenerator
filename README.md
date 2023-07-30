@@ -25,9 +25,9 @@ The Landing Page Generator is a Django web application that allows users to easi
 To set up the Landing Page Generator, follow these steps:
 
 - Clone the repository to your local machine using the following command:
-git clone https://github.com/your-username/landing-page-generator.git
+git clone https://github.com/LaxmansAryan/LandingPageGenerator.git
 - Navigate to the project directory:
-cd landing-page-generator
+cd karabo
 - Create a virtual environment (optional, but recommended):
 python -m venv env
 source env/bin/activate   # For Windows: env\Scripts\activate
